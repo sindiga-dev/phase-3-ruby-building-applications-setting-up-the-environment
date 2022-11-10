@@ -1,13 +1,9 @@
 class Garden
   attr_accessor :name
+  attr_accessor :plants
 
-  def initialize(name:)
+  def initialize(name)
     @name = name
-  end
-
-  def plants
-    Plant.all.select do |plant|
-      plant.garden == self
-    end
+    @plants = []
   end
 end
